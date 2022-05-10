@@ -1,0 +1,248 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Quiz</title>
+  <!-- link -->
+  <link rel="stylesheet" href="css/bootstrap.min.css">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.7.2/font/bootstrap-icons.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.8.2/angular.min.js"></script>
+  <script src="https://kit.fontawesome.com/29b41ee1c8.js" crossorigin="anonymous"></script>
+</head>
+
+<body ng-app="myApp" ng-controller="quizController" ng-init="">
+  <div class="container">
+    <header class="row">
+      <img src="img/270282507_4802450183147377_5158199785237686706_n.png" class="img-fluid p-0" alt="">
+    </header>
+    <nav class="row navbar navbar-expand-lg navbar-dark bg-danger">
+      <div class="container-fluid px-2">
+        <a class="navbar-brand " href="#trang-chu">
+          <i class="bi bi-mortarboard-fill"></i>
+          FPT Polytechnic
+        </a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavDropdown"
+          aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNavDropdown">
+          <ul class=" navbar-nav me-auto">
+            <li class="nav-item">
+              <a class="nav-link" aria-current="page" href="quiz.html">Quiz</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" aria-current="page" href="introduce.html">Giới thiệu</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="contact.html">Liên hệ</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="QA.html" ng-click="artInclude = 'artQA.html'">Hỏi đáp</a>
+            </li>
+          </ul>
+          <span class="nav-item dropdown">
+            <a class="nav-link dropdown-toggle text-white ps-0" href="#" id="navbarDropdownMenuLink" role="button"
+              data-bs-toggle="dropdown" aria-expanded="false">
+              Tài khoản
+            </a>
+            <ul class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
+              <li><a class="dropdown-item" href="register.html">Đăng ký</a></li>
+              <li><a class="dropdown-item" href="login.html">Đăng nhập</a></li>
+              <li><a class="dropdown-item" href="forgot.html">Quên mật khẩu</a></li>
+              <hr>
+              <li><a class="dropdown-item" href="#">Đăng xuất</a></li>
+              <li>
+                <a class="dropdown-item" href="#" data-bs-toggle="modal" data-bs-target="#exampleModal">Đổi mật
+                  khẩu</a>
+              </li>
+              <li><a class="dropdown-item" href="setInfo.html">Cập nhật
+                  tài khoản</a></li>
+            </ul>
+            <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel"
+              aria-hidden="true">
+              <div class="modal-dialog">
+                <div class="modal-content">
+                  <div class="modal-header">
+                    <h5 class="modal-title" id="exampleModalLabel">Đổi mật khẩu</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                  </div>
+                  <div class="modal-body">
+                    <form>
+                      <div class="mb-3">
+                        <input type="password" class="form-control" placeholder="Mật khẩu cũ">
+                      </div>
+                      <div class="mb-3">
+                        <input type="password" class="form-control" placeholder="Mật khẩu mới">
+                      </div>
+                      <div class="mb-3">
+                        <input type="password" class="form-control" placeholder="Xác nhận mật khẩu">
+                      </div>
+                    </form>
+                  </div>
+                  <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Đóng</button>
+                    <button type="submit" class="btn btn-primary">Xác nhận</button>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </span>
+        </div>
+      </div>
+    </nav>
+    <div class="row mt-2">
+      <div class="px-0">
+        <button class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#Modal">Nộp bài</button>
+        <div class="modal fade" id="Modal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+          <div class="modal-dialog modal-dialog-centered">
+            <div class="modal-content">
+              <div class="modal-header">
+                <h5 class="modal-title" id="exampleModalLabel">Xác nhận</h5>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+              </div>
+              <div class="modal-body">
+                Bạn có muốn nộp bài không?
+              </div>
+              <div class="modal-footer">
+                <button type="button" class="btn btn-danger" data-bs-dismiss="modal">Xác nhận</button>
+                <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Hủy</button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="row">
+      <article class="col-sm-9 mt-2">
+        <div class="row">
+          <div class="card p-0">
+            <div class="card-header">
+              <h5 class="card-title text-uppercase mb-0 pt-1"><i class="bi bi-book-fill text-danger"></i> cơ sở dữ
+                liệu</h5>
+
+            </div>
+
+            <div class="card-body">
+              <div class="row">
+                <p class="ps-4">{{arrQuestion[count]}}</p>
+
+                <hr>
+                <div class="row ps-5">
+                  <div class="form-check">
+                    <input class="form-check-input" type="radio" name="flexRadioDefault" id="rd1">
+                    <label class="form-check-label" for="rd1">
+                      {{arrAws1[count]}}
+                    </label>
+                  </div>
+                  <div class="form-check">
+                    <input class="form-check-input" type="radio" name="flexRadioDefault" id="rd2" checked>
+                    <label class="form-check-label" for="rd2">
+                      {{arrAws2[count]}}
+                    </label>
+                  </div>
+                  <div class="form-check">
+                    <input class="form-check-input" type="radio" name="flexRadioDefault" id="rd3">
+                    <label class="form-check-label" for="rd3">
+                      {{arrAws3[count]}}
+                    </label>
+                  </div>
+                  <div class="form-check">
+                    <input class="form-check-input" type="radio" name="flexRadioDefault" id="rd4" checked>
+                    <label class="form-check-label" for="rd4">
+                      {{arrAws4[count]}}
+                    </label>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="row mt-2">
+          <nav aria-label="...">
+            <ul class="pagination justify-content-center">
+              <li class="page-item">
+                <button class="page-link" ng-click="count = 0"><i class="fas fa-angle-double-left"></i></button>
+              </li>
+              <li class="page-item">
+                <button class="page-link" ng-click="prevQues()"><i class="fas fa-angle-left"></i></button>
+              </li>
+              <li class="page-item">
+                <button class="page-link" ng-click="nextQues()"><i class="fas fa-angle-right"></i></button>
+              </li>
+              <li class="page-item">
+                <button class="page-link" ng-click="count = 9"><i class="fas fa-angle-double-right"></i></button>
+              </li>
+            </ul>
+          </nav>
+        </div>
+      </article>
+      <aside class="col-sm-3 pb-5 mb-5 pe-0">
+        <div class="card mt-2">
+          <div class="card-header">
+            <h5 class="card-title mb-0"><a class="text-decoration-none text-black d-block" href="#"
+                data-bs-toggle="collapse" data-bs-target="#lstMon"><i class="bi bi-list-ul"></i> Danh sách câu hỏi
+                <span class="badge bg-danger rounded-pill float-end">10</span></a></h5>
+          </div>
+          <div class="card-body p-0 collapse show" id="listMon">
+            <div class="list-group">
+              <button class="list-group-item list-group-item-action" ng-click="count = 0">Câu 1</button>
+              <button class="list-group-item list-group-item-action" ng-click="count = 1">Câu 2</button>
+              <button class="list-group-item list-group-item-action" ng-click="count = 2">Câu 3</button>
+              <button class="list-group-item list-group-item-action" ng-click="count = 3">Câu 4</button>
+              <button class="list-group-item list-group-item-action" ng-click="count = 4">Câu 5</button>
+              <button class="list-group-item list-group-item-action" ng-click="count = 5">Câu 6</button>
+              <button class="list-group-item list-group-item-action" ng-click="count = 6">Câu 7</button>
+              <button class="list-group-item list-group-item-action" ng-click="count = 7">Câu 8</button>
+              <button class="list-group-item list-group-item-action" ng-click="count = 8">Câu 9</button>
+              <button class="list-group-item list-group-item-action" ng-click="count = 9">Câu 10</button>
+            </div>
+          </div>
+        </div>
+      </aside>
+    </div>
+    <footer class="row bg-danger">
+      <div class="col-sm-3">
+        <img src="img/icon2a.png" class="w-75 pt-2" alt="">
+      </div>
+      <div class="col-sm-3 pt-3">
+        <h5 class="text-uppercase text-white">Thông tin liên hệ</h5>
+        <p class="text-white">
+          <i class="bi bi-envelope-fill"></i> Email: caodang@fpt.edu.vn
+          <br>
+          <i class="bi bi-telephone-fill"></i> <span class="text-decoration-underline">(024) 7300 1955</span>
+        </p>
+      </div>
+      <div class="col-sm-6 pt-3">
+        <h5 class="text-uppercase text-white">Địa chỉ cơ sở Hà Nội</h5>
+        <p class="text-white">
+          <i class="bi bi-geo-alt-fill"></i> Tòa nhà FPT Polytechnic, Phố Trịnh Văn Bô, Nam Từ Liêm, Hà Nội
+          <br>
+          <i class="bi bi-telephone-fill"></i> <span class="text-decoration-underline">(024) 8582 0808</span>
+        </p>
+      </div>
+    </footer>
+
+  </div>
+
+  <script src="controller/quizController.js"></script>
+  <script>
+    const app = angular.module("myApp", ["ngRoute"]);
+    app.config(function($routeProvider) {
+        $routeProvider
+          .when("/trang-chu", {
+            template: "tra",
+          })
+    })
+    app.controller("quizController.js", quizController.js);
+  </script>
+
+  <!-- script -->
+  <script src="js/popper.min.js"></script>
+  <script src="js/jquery.min.js"></script>
+  <script src="js/bootstrap.min.js"></script>
+</body>
+
+</html>

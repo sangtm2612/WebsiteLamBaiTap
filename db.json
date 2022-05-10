@@ -1,0 +1,198 @@
+{
+  "subject": [
+    {
+      "id": 1,
+      "text": "Xây dựng trang web",
+      "img": "HTCS.jpg"
+    },
+    {
+      "id": 2,
+      "text": "Cơ sở dữ liệu",
+      "img": "DBBS.png"
+    },  
+    {
+      "id": 3,
+      "text": "Lập trình Javascript",
+      "img": "JSPR.png"
+    },
+    {
+      "id": 4,
+      "text": "Trò chơi con mực",
+      "img": "GAME.png"
+    },
+    {
+      "id": 5,
+      "text": "Lập trình ASP.NET",
+      "img": "ASNE.png"
+    },
+    {
+      "id": 6,
+      "text": "Lập trình PHP",
+      "img": "PHPP.png"
+    },
+    {
+      "id": 7,
+      "text": "Java OPP",
+      "img": "JAAV.png"
+    },
+    {
+      "id": 8,
+      "text": "Lập trình mobile",
+      "img": "ADBS.jpg"
+    }
+  ],
+  "quizs": [
+    {
+      "id": 1,
+      "ques": "Câu 1. Câu lệnh SQL nào được dùng để truy xuất dữ liệu từ database?",
+      "as1": "Get",
+      "as2": "Open",
+      "as3": "Extract",
+      "as4": "Select",
+      "value": "Select"
+    },
+    {
+      "id": 2,
+      "ques": "Câu 2. Câu lệnh SQL nào được dùng để cập nhật dữ liệu từ database?",
+      "as1": "Get",
+      "as2": "Open",
+      "as3": "Update",
+      "as4": "Select",
+      "value": "Update"
+    },
+    {
+      "id": 3,
+      "ques": "Câu 3. Câu lệnh SQL nào được dùng để xóa dữ liệu từ database?",
+      "author": "typicode"
+    },
+    {
+      "id": 4,
+      "ques": "Câu 4. Câu lệnh SQL nào được dùng để chèn thêm dữ liệu vào database?",
+      "author": "typicode"
+    },
+    {
+      "id": 5,
+      "ques": "Câu 5. Trong SQL, làm thế nào để chọn tất cả các cột dữ liệu trong bảng Persons?",
+      "author": "typicode"
+    },
+    {
+      "id": 6,
+      "ques": "Câu 6. Trong SQL làm thế nào để chọn tất cả các bản ghi từ bảng Persons với giá trị trong cột FirstName là Peter?",
+      "author": "typicode"
+    },
+    {
+      "id": 7,
+      "ques": "Câu 7. Cú pháp SQL nào được dùng để trả về những giá trị khác nhau?",
+      "author": "typicode"
+    },
+    {
+      "id": 8,
+      "ques": "Câu 8. Từ khóa SQL nào được sử dụng để sắp xếp danh sách kết quả?",
+      "author": "typicode"
+    },
+    {
+      "id": 9,
+      "ques": "Câu 9. Trong SQL, làm thế nào để trả về số lượng các bản ghi trong bảng Persons?",
+      "author": "typicode"
+    },
+    {
+      "id": 10,
+      "ques": "Câu 10. Kiểu khóa nào sau đây sẽ ngăn chặn bất kỳ người dùng nào truy cập vào bảng dữ liệu?",
+      "author": "typicode"
+    }
+  ],
+  "sv": [
+    {
+      "id": 1,
+      "email": "admin@gmail.com",
+      "pass": "admin@gmail.com123",
+      "pass1": "admin@gmail.com123",
+      "isAdmin": "Admin",
+      "fullname": "Admin",
+      "gender": "1",
+      "address": "Ninh Bình"
+    },
+    {
+      "email": "sangtm@gmail.com",
+      "pass1": "123123",
+      "pass": "123123",
+      "fullname": "ngu",
+      "gender": "1",
+      "address": "ngu ngu",
+      "id": 2
+    },
+    {
+      "email": "sangtm2612@gmail.com",
+      "pass1": "tmsang1231",
+      "pass": "tmsang1231",
+      "fullname": "Trần minh sáng",
+      "gender": "0",
+      "address": "ninh bình",
+      "id": 9
+    },
+    {
+      "email": "sangtm2612@gmail.com",
+      "pass1": "tmsang1231",
+      "pass": "tmsang1231",
+      "fullname": "Trần minh sáng",
+      "gender": "0",
+      "address": "ninh bình",
+      "id": 12
+    },
+    {
+      "email": "sangtm2612@gmail.com",
+      "pass1": "tmsang1231",
+      "pass": "tmsang1231",
+      "fullname": "Trần minh sáng",
+      "gender": "0",
+      "address": "ninh bình",
+      "id": 13
+    },
+    {
+      "email": "sangtm@gmail.com",
+      "pass1": "123123",
+      "pass": "123123",
+      "fullname": "ngu",
+      "gender": "1",
+      "address": "ngu ngu",
+      "id": 14
+    },
+    {
+      "email": "sangtm@gmail.com",
+      "pass1": "123123",
+      "pass": "123123",
+      "fullname": "ngu",
+      "gender": "1",
+      "address": "ngu ngu",
+      "id": 15
+    },
+    {
+      "id": 16,
+      "email": "admin@gmail.com",
+      "pass": "admin@gmail.com123",
+      "pass1": "admin@gmail.com123",
+      "isAdmin": "Admin",
+      "fullname": "Admin",
+      "gender": "1",
+      "address": "Ninh Bình"
+    },
+    {
+      "email": "sangtm@gmail.com",
+      "pass1": "123123",
+      "pass": "123123",
+      "fullname": "ngu",
+      "gender": "1",
+      "address": "ngu ngu",
+      "id": 17
+    },
+    {
+      "email": "sangtm@gmail.com",
+      "pass1": "123123",
+      "pass": "123123",
+      "fullname": "ngu",
+      "gender": "1",
+      "address": "ngu ngu",
+      "id": 18
+    }
+  ]
+}
